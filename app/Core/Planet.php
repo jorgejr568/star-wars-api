@@ -34,7 +34,7 @@ class Planet extends Model
 
             $filmsCount = is_object($swapiResponse) ? count($swapiResponse->films) : 0;
 
-            \Cache::put($cacheName,$filmsCount,1440);
+            \Cache::put($cacheName,$filmsCount,1440 * 30);
 
             return $filmsCount;
         }
