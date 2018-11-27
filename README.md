@@ -28,3 +28,10 @@
 ## Environment
 
 - Highly recommended to use [Homestead](https://laravel.com/docs/5.7/homestead) with [Vagrant](https://www.vagrantup.com/)
+
+## Requests
+
+- Listing planets GET /planet
+- Creating planet POST /planet
+- Removing planet DELETE /planet/{id}
+- Get planet GET /planet/{id}
