@@ -12,7 +12,7 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return "Hello B2W";
 });
 
 $router->group(['prefix' => 'planet','as' => 'planet.'],function () use($router){
