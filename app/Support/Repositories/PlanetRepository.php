@@ -37,7 +37,9 @@ class PlanetRepository extends BaseRepository
         /** @var Planet $planet */
         $planet = $this->getModel()->where('id',$id)->first();
 
-        return $this->planetDefaultObject($planet);
+        if($planet) {
+            return $this->planetDefaultObject($planet);
+        }else return null;
     }
 
     public function list(){
