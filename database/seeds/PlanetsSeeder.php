@@ -18,7 +18,7 @@ class PlanetsSeeder extends Seeder
         $repository = new PlanetRepository();
 
         while (true){
-            $swapiResponse = json_decode(file_get_contents("https://swapi.co/api/planets/$i"));
+            $swapiResponse = json_decode(@file_get_contents("https://swapi.co/api/planets/$i"));
             if (is_object($swapiResponse)) {
                 $repository->create((new Planet())->fill([
                     "id" => $i,
